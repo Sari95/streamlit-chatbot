@@ -3,7 +3,7 @@ import streamlit as st
 import openai
 
 #Setting the API key of OpenAI
-openai.api_key = st.secrets["OPEN_API_KEY"]
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 st.title("Einfacher Chatbot")
 
