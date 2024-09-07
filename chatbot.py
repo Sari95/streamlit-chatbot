@@ -25,12 +25,20 @@ if prompt := st.chat_input("Schreibe deine Nachricht:"):
 
     #Sending the input to GPT-4 and receiving the response
     response = openai.ChatCompletion.create(
-        model="gpt-4",
-        messages=[
-            {"role": "system", "content": "Du bist ein hilfsbereiter Chatbot."},
-            {"role": "user", "content": prompt}
-        ]
-    )
+    model="gpt-3.5-turbo",
+    messages=[
+        {"role": "system", "content": "Du bist ein hilfsbereiter Chatbot."},
+        {"role": "user", "content": prompt}
+    ]
+)
+
+    #response = openai.ChatCompletion.create(
+     #   model="gpt-4",
+      #  messages=[
+       #     {"role": "system", "content": "Du bist ein hilfsbereiter Chatbot."},
+        #    {"role": "user", "content": prompt}
+       # ]
+    #)
 
     #Showing the response of the chatbot
     bot_message = response["choices"][0]["message"]["content"]
